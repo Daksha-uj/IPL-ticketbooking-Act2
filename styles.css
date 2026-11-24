@@ -1,0 +1,345 @@
+/* ===== Theme Variables ===== */
+:root {
+  --primary: #0b1f4d;
+  --primary-dark: #07143a;
+  --accent: #f5b301;
+  --accent-dark: #d99a00;
+  --background: #f4f6fb;
+  --text: #1a1a2e;
+  --white: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Base Styles ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.6;
+}
+/* ===== Smooth scrolling, offset for fixed bar ===== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+
+/* ===== Navigation Bar ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 32px;
+  background-color: var(--primary);
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 3px solid var(--accent);
+  box-shadow: var(--shadow);
+  height: 70px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+/* ===== Hero / Banner Section ===== */
+hr {
+  border: none;
+  margin: 0;
+}
+
+#home {
+  background: linear-gradient(135deg, var(--primary), #1c3f95);
+  color: var(--white);
+  text-align: center;
+  padding: 90px 20px;
+}
+
+#home h2 {
+  font-size: 2.6rem;
+  margin: 0 0 12px;
+  color: var(--accent);
+}
+
+#home p {
+  font-size: 1.2rem;
+  margin: 0 0 30px;
+}
+
+#home a {
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+#home button {
+  font-family: inherit;
+  background-color: var(--accent);
+  color: var(--primary);
+  border: 2px solid var(--accent);
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+#home button:hover {
+  background-color: transparent;
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+/* ===== Section Cards ===== */
+section:not(#home) {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+section:not(#home) h2 {
+  margin-top: 0;
+  color: var(--primary);
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 8px;
+}
+
+section:not(#home) h3 {
+  color: var(--primary);
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+}
+
+th,
+td {
+  border: none;
+  border-bottom: 1px solid #dde3f0;
+  padding: 14px 16px;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f3fa;
+}
+
+tbody tr:hover {
+  background-color: #fff3cc;
+}
+
+td a {
+  text-decoration: none;
+}
+
+td button {
+  font-family: inherit;
+  background-color: var(--accent);
+  color: var(--primary);
+  border: none;
+  padding: 8px 18px;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+td button:hover {
+  background-color: var(--primary);
+  color: var(--accent);
+}
+/* ===== Booking Layout ===== */
+.booking-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* ===== Forms ===== */
+form {
+  flex: 1;
+  min-width: 300px;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 0 18px;
+}
+
+label {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+input,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 12px;
+  background-color: var(--white);
+  border: 2px solid #cfd6e6;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 179, 1, 0.25);
+}
+
+#teamFilter {
+  margin-left: 8px;
+}
+
+form button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 26px;
+  margin-right: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s, color 0.3s;
+}
+
+form button[type="submit"] {
+  background-color: var(--accent);
+  color: var(--primary);
+  border: 2px solid var(--accent);
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+form button[type="reset"] {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+form button[type="reset"]:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+/* ===== Booking Summary Card ===== */
+#summary {
+  min-width: 270px;
+  padding: 24px;
+  background-color: var(--primary);
+  color: var(--white);
+  border-top: 5px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+aside#summary h3 {
+  margin-top: 0;
+  color: var(--accent) !important;
+}
+
+#summary p {
+  margin: 10px 0;
+}
+
+#summary p:last-child {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+/* ===== Guideline Cards ===== */
+article {
+  margin: 18px 0;
+  padding: 20px 24px;
+  background-color: var(--background);
+  border-left: 6px solid var(--accent);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+article h3 {
+  margin: 0 0 8px;
+}
+
+article p {
+  margin: 0;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 40px;
+  padding: 30px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  text-align: center;
+  border-top: 4px solid var(--accent);
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+footer p:last-child {
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+/* ===== Summary heading fix ===== */
+section aside#summary > h3 {
+  margin: 0 0 12px;
+  color: #f5b301 !important;
+}
