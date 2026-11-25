@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Tickets - IPL Ticket Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>IPL Ticket Booking Form</h1>
+  <p>Fill in the details below to book your tickets.</p>
+
+  <form id="bookingForm" action="booking.html" method="get">
+
+    <h2>Personal Details</h2>
+
+    <p>
+      <label for="fullname">Full Name:</label><br>
+      <input type="text" id="fullname" name="fullname"
+             placeholder="Enter your full name"
+             required minlength="3" maxlength="50">
+    </p>
+
+    <p>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email"
+             placeholder="example@gmail.com"
+             required>
+    </p>
+
+    <p>
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone"
+             placeholder="10-digit mobile number"
+             required minlength="10" maxlength="10"
+             pattern="[0-9]{10}"
+             title="Enter exactly 10 digits (numbers only)">
+    </p>
+
+    <h2>Booking Details</h2>
+
+    <p>
+      <label for="match">Select Match:</label><br>
+      <select id="match" name="match" required>
+        <option value="">-- Choose a match --</option>
+        <option value="csk-vs-mi">CSK vs MI</option>
+        <option value="rcb-vs-kkr">RCB vs KKR</option>
+        <option value="dc-vs-srh">DC vs SRH</option>
+        <option value="gt-vs-rr">GT vs RR</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="stand">Stand Category:</label><br>
+      <select id="stand" name="stand" required>
+        <option value="">-- Choose a stand --</option>
+        <option value="general">General Stand</option>
+        <option value="premium">Premium Stand</option>
+        <option value="vip">VIP Box</option>
+      </select>
+    </p>
+
+    <p>
+      <label for="tickets">Number of Tickets:</label><br>
+      <input type="number" id="tickets" name="tickets"
+             placeholder="1 to 10"
+             required min="1" max="10">
+    </p>
+
+    <h2>Booking Preferences</h2>
+
+    <p>Ticket Delivery Method:</p>
+    <p class="choice-group">
+      <input type="radio" id="eticket" name="delivery" value="eticket" required>
+      <label for="eticket">E-Ticket (Email)</label><br>
+
+      <input type="radio" id="collect" name="delivery" value="collect">
+      <label for="collect">Collect at Stadium Counter</label>
+    </p>
+
+    <p>Additional Add-ons (optional):</p>
+    <p class="choice-group">
+      <input type="checkbox" id="meal" name="addons" value="meal">
+      <label for="meal">Meal Combo</label><br>
+
+      <input type="checkbox" id="parking" name="addons" value="parking">
+      <label for="parking">Parking Pass</label><br>
+
+      <input type="checkbox" id="jersey" name="addons" value="jersey">
+      <label for="jersey">Team Jersey</label>
+    </p>
+
+    <p class="choice-group">
+      <input type="checkbox" id="terms" name="terms" value="agreed" required>
+      <label for="terms">I agree to the Terms and Conditions</label>
+    </p>
+
+    <div class="form-buttons">
+      <button type="submit">Submit</button>
+      <button type="reset" class="reset-btn">Reset</button>
+    </div>
+    
+  </form>
+
+  <p><a href="index.html">← Back to Home</a></p>
+
+</body>
+</html>

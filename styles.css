@@ -343,3 +343,56 @@ section aside#summary > h3 {
   margin: 0 0 12px;
   color: #f5b301 !important;
 }
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+/* Fix radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline;
+  font-weight: normal;
+}
+/* Radio + checkbox groups */
+.choice-group {
+  display: block;
+}
+
+.choice-group input[type="radio"],
+.choice-group input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin: 0 8px 0 0;
+  vertical-align: middle;
+}
+
+.choice-group label {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+/* Submit + Reset buttons */
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.reset-btn {
+  background: transparent;
+  color: #f0b429;
+  border: 2px solid #f0b429;
+}
+
+.reset-btn:hover {
+  background: #f0b429;
+  color: #0a1a3f;
+}
